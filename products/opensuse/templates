@@ -281,6 +281,32 @@
                     },
                     {
                       group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "NET",
+                        group   => "opensuse-NET",
+                        version => "*",
+                      },
+                      test_suite => { name => "minimalx-image" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "NET",
+                        group   => "opensuse-NET",
+                        version => "*",
+                      },
+                      test_suite => { name => "tumbleweed-image" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
                       machine => { name => "ppc64" },
                       prio => 50,
                       product => {
@@ -3499,6 +3525,30 @@
                         { key => "DESKTOP", value => "kde" },
                         { key => "INSTALL_SOURCE", value => "http" },
                         { key => "WITH_UPDATE_REPO", value => 1 },
+                      ],
+                    },
+                    {
+                      name => "minimalx-image",
+                      settings => [
+                        { key => "DESKTOP", value => "minimalx" },
+                        { key => "HDDSIZEGB", value => 40 },
+                        { key => "INSTALLONLY", value => 1 },
+                        { key => "PUBLISH_HDD_1", value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-minimalx@%MACHINE%.qcow2" },
+                        { key => "QEMU_COMPRESS_QCOW2", value => 1 },
+                        { key => "TOGGLEHOME", value => 1 },
+                      ],
+                    },
+                    {
+                      name => "tumbleweed-image",
+                      settings => [
+                        { key => "DESKTOP", value => "gnome" },
+                        { key => "HDDSIZEGB", value => 40 },
+                        { key => "INSTALLONLY", value => 1 },
+                        { key => "LINUXRC_KEXEC", value => 1 },
+                        { key => "NETBOOT", value => 0 },
+                        { key => "PUBLISH_HDD_1", value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-Tumbleweed@%MACHINE%.qcow2" },
+                        { key => "QEMU_COMPRESS_QCOW2", value => 1 },
+                        { key => "TOGGLEHOME", value => 1 },
                       ],
                     },
                   ],
