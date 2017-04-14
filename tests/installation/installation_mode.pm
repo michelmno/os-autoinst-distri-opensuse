@@ -17,13 +17,24 @@ use base 'y2_installbase';
 use testapi;
 
 sub run {
-    # autoconf phase
-    # includes downloads
-    assert_screen [qw(partitioning-edit-proposal-button before-role-selection inst-instmode online-repos)], 120;
-    if (match_has_tag("partitioning-edit-proposal-button") || match_has_tag("before-role-selection") || match_has_tag("online-repos")) {
-        # new desktop selection workflow
-        set_var('NEW_DESKTOP_SELECTION', 1);
-        return;
+    my $keep_trying = 1;
+    my @tags = qw(partitioning-edit-proposal-button before-role-selection inst-instmode online-repos yast2_wrong_digest);
+    while ($keep_trying) {
+        # autoconf phase
+        # includes downloads
+        assert_screen \@tags, 120;
+        if (match_has_tag("partitioning-edit-proposal-button") || match_has_tag("before-role-selection") || match_has_tag("online-repos")) {
+            # new desktop selection workflow
+            set_var('NEW_DESKTOP_SELECTION', 1);
+            return;
+        }
+
+        if (match_has_tag("yast2_wrong_digest")) {
+            record_soft_failure "boo#1014470 accept wrong digest for remote repo.";
+            send_key 'alt-y';    # yes
+            next;
+        }
+        last;
     }
 
     if (get_var("UPGRADE")) {

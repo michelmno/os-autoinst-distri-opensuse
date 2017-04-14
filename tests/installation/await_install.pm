@@ -110,6 +110,10 @@ sub run {
 
         if (match_has_tag('yast2_wrong_digest')) {
             die 'Wrong Digest detected error, need to end test.';
+            # accept "wrong digest" as bypass boo 1014470
+            record_soft_failure "boo#1014470 accept wrong digest for remote repo.";
+            send_key 'alt-y';    # yes
+            next;
         }
 
         if (match_has_tag('yast2_package_retry')) {
