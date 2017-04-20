@@ -390,8 +390,8 @@
                       product => {
                         arch    => "ppc64",
                         distri  => "opensuse",
-                        flavor  => "NET",
-                        group   => "opensuse-NET",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
                         version => "*",
                       },
                       test_suite => { name => "install_only" },
@@ -3354,6 +3354,7 @@
                       name => "install_only",
                       settings => [
                         { key => "DESKTOP", value => "kde" },
+                        { key => "HDDSIZEGB", value => 30 },
                         { key => "INSTALLONLY", value => 1 },
                       ],
                     },
