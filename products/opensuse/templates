@@ -73,7 +73,7 @@
                     },
                     {
                       group_name => "openSUSE Tumbleweed PowerPC",
-                      machine => { name => "ppc64le-multipath" },
+                      machine => { name => "ppc64le" },
                       prio => 50,
                       product => {
                         arch    => "ppc64le",
@@ -82,7 +82,7 @@
                         group   => "opensuse-DVD",
                         version => "*",
                       },
-                      test_suite => { name => "install_minimalx" },
+                      test_suite => { name => "multipath" },
                     },
                     {
                       group_name => "openSUSE Tumbleweed PowerPC",
@@ -216,7 +216,7 @@
                     },
                     {
                       group_name => "openSUSE Tumbleweed PowerPC",
-                      machine => { name => "ppc64-multipath" },
+                      machine => { name => "ppc64" },
                       prio => 50,
                       product => {
                         arch    => "ppc64",
@@ -225,7 +225,7 @@
                         group   => "opensuse-DVD",
                         version => "*",
                       },
-                      test_suite => { name => "install_minimalx" },
+                      test_suite => { name => "multipath" },
                     },
                     {
                       group_name => "openSUSE Tumbleweed PowerPC",
@@ -2848,38 +2848,6 @@
                         { key => "WORKER_CLASS", value => "qemu_ppc64" },
                         { key => "VNC_TYPING_LIMIT", value => 10 },
                         { key => "QEMU_DISABLE_SNAPSHOTS", value => 1 },
-                      ],
-                    },
-                    {
-                      backend => "qemu",
-                      name => "ppc64le-multipath",
-                      settings => [
-                        { key => "HDDSIZEGB", value => 20 },
-                        { key => "MULTIPATH", value => 1 },
-                        { key => "NOVIDEO", value => 1 },
-                        { key => "OFW", value => 1 },
-                        { key => "QEMU", value => "ppc64" },
-                        { key => "QEMUCPU", value => "host" },
-                        { key => "QEMUCPUS", value => 8 },
-                        { key => "QEMUTHREADS", value => 8 },
-                        { key => "QEMURAM", value => 4096 },
-                        { key => "WORKER_CLASS", value => "qemu_ppc64le" },
-                      ],
-                    },
-                    {
-                      backend => "qemu",
-                      name => "ppc64-multipath",
-                      settings => [
-                        { key => "HDDSIZEGB", value => 20 },
-                        { key => "MULTIPATH", value => 1 },
-                        { key => "NOVIDEO", value => 1 },
-                        { key => "OFW", value => 1 },
-                        { key => "QEMU", value => "ppc64" },
-                        { key => "QEMUCPU", value => "host" },
-                        { key => "QEMUCPUS", value => 8 },
-                        { key => "QEMUTHREADS", value => 8 },
-                        { key => "QEMURAM", value => 4096 },
-                        { key => "WORKER_CLASS", value => "qemu_ppc64" },
                       ],
                     },
                     {
