@@ -2736,6 +2736,58 @@
                       },
                       test_suite => { name => "install_textmode" }
                     },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "create_hdd_textmode" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "extra_tests_filesystem" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "extra_tests_in_textmode" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "toolchain_zypper" },
+                    },
                   ],
   Machines     => [
                     {
@@ -3651,6 +3703,181 @@
                         { key => "DESKTOP", value => "kde" },
                         { key => "INSTALL_SOURCE", value => "http" },
                         { key => "WITH_UPDATE_REPO", value => 1 },
+                      ],
+                    },
+                    {
+                      description => "image creation job used as parent for other jobs testing based on existing installation. Installation in textmode and selecting the textmode \"desktop\" during installation.\nriafarov: added DISABLE_ONLINE_REPOS=1 to disable online repos during installation. See poo#17436",
+                      name => "create_hdd_textmode",
+                      settings => [
+                        { key => "DESKTOP", value => "textmode" },
+                        { key => "DISABLE_ONLINE_REPOS", value => 1 },
+                        { key => "HDDSIZEGB", value => 22 },
+                        { key => "INSTALLONLY", value => 1 },
+                        {
+                          key => "PUBLISH_HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "QEMU_COMPRESS_QCOW2", value => 1 },
+                        { key => "TOGGLEHOME", value => 1 },
+                        { key => "VIDEOMODE", value => "text" },
+                      ],
+                    },
+                    {
+                      name => "extra_tests_in_textmode",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        { key => "EXTRATEST", value => 1 },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "NUMDISKS", value => 2 },
+                        { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
+                        { key => "SYSAUTHTEST", value => 1 },
+                      ],
+                    },
+                    {
+                      description => "WARNING: QEMUCPUS QEMURAM removed, need to use adequate machine definition.",
+                      name => "install_ltp+opensuse+DVD",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "INSTALL_LTP", value => "from_git" },
+                        {
+                          key => "PUBLISH_HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
+                      ],
+                    },
+                    {
+                      description => "Install the Linux Test Project CVE development branch.  WARNING: QEMUCPUS QEMURAM removed, need to use adequate machine definition.",
+                      name => "install_ltp+opensuse+DVD+CVE",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "INSTALL_LTP", value => "from_git" },
+                        {
+                          key => "LTP_GIT_URL",
+                          value => "https://github.com/richiejp/ltp.git",
+                        },
+                        { key => "LTP_RELEASE", value => "cve" },
+                        {
+                          key => "PUBLISH_HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-cve.qcow2",
+                        },
+                        { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
+                      ],
+                    },
+                    {
+                      description => "Maintainer: okurz\@suse.de, yxu\n\nFilesystem related tests, for example snapper and btrfs features.",
+                      name => "extra_tests_filesystem",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        { key => "FILESYSTEM_TEST", value => 1 },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "NUMDISKS", value => 2 },
+                        { key => "SNAPPER_NODBUS", value => 1 },
+                        { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
+                      ],
+                    },
+                    {
+                      description => "Include basic sanity checks of wicked network framework\nMaintainer:  asmorodskyi\@suse.de",
+                      name => "wicked_basic",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
+                        { key => "VIDEOMODE", value => "text" },
+                        { key => "WICKED", value => "basic" },
+                      ],
+                    },
+                    {
+                      description => "Maintainer: slindomansilla\n\nTest the systemd version included on the iso",
+                      name => "suse_patches-systemd_testsuite",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "ISO", value => "" },
+                        {
+                          key => "QA_HEAD_REPO",
+                          value => "https://download.opensuse.org/repositories/home:/tsaupe:/testsuites/openSUSE_%VERSION%/",
+                        },
+                        { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
+                        { key => "SYSTEMD_TESTSUITE", value => 1 },
+                      ],
+                    },
+                    {
+                      description => "Install toolchain packages and test the toolchain. Uses a more powerful machine configuration.\n\n--\n\nMaintainer: slindomansilla, jrivera. WARNING: QEMUCPUS QEMURAM removed, need to use adequate machine definition.",
+                      name => "toolchain_zypper",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        { key => "HDDSIZEGB", value => 20 },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "INSTALLONLY", value => 1 },
+                        { key => "MAX_JOB_TIME", value => 14400 },
+                        { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
+                        { key => "TCM", value => 1 },
+                      ],
+                    },
+                    {
+                      description => "Install the Linux Test Project network development branch. WARNING: QEMUCPUS QEMURAM removed, need to use adequate machine definition.",
+                      name => "install_ltp+opensuse+DVD+NETWORK",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "INSTALL_LTP", value => "from_git" },
+                        { key => "LTP_GIT_URL", value => "https://github.com/pevik/ltp.git" },
+                        { key => "LTP_RELEASE", value => "network-next" },
+                        {
+                          key => "PUBLISH_HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network.qcow2",
+                        },
+                        { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
+                      ],
+                    },
+                    {
+                      description => "Maintainer: dheidler\@suse.de, okurz\@suse.de\nTest for systemd-networkd. These tests run on a single testmachine and spawn systemd-nspawn containers.",
+                      name => "systemd-networkd",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "NETWORKD", value => 1 },
+                        { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
+                        { key => "VIDEOMODE", value => "text" },
                       ],
                     },
                   ],
