@@ -90,7 +90,7 @@ sub addpart {
         # add partition screen was not refreshing fast enough
         send_key_until_needlematch 'partition-selected-raid-type', 'down', 20, 3;
     }
-    send_key(is_storage_ng() ? $cmd{next} : $cmd{finish});
+    wait_screen_change { send_key(is_storage_ng() ? $cmd{next} : $cmd{finish}); };
 }
 
 sub addraid {
