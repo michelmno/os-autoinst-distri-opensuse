@@ -411,6 +411,19 @@
                     },
                     {
                       group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 10,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "install_multi_empty" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
                       machine => { name => "ppc64" },
                       prio => 50,
                       product => {
@@ -3913,5 +3926,14 @@
                         { key => "VIDEOMODE", value => "text" },
                       ],
                     },
+                    {
+                      name => "install_multi_empty",
+                      settings => [
+                        { key => "DESKTOP", value => "kde" },
+                        { key => "INSTALLONLY", value => 1 },
+                        { key => "NUMDISKS", value => "2" },
+                      ],
+                    },
+
                   ],
 }
