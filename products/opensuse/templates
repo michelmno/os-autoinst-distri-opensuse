@@ -385,6 +385,19 @@
                     },
                     {
                       group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 10,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "install_multi_empty" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
                       machine => { name => "ppc64" },
                       prio => 50,
                       product => {
@@ -3880,5 +3893,17 @@
                         { key => "VIDEOMODE", value => "text" },
                       ],
                     },
+                    {
+                      description => "need more than 10GB for ppc64le, assume only disk1 used, but PReP on disk2",
+                      name => "install_multi_empty",
+                      settings => [
+                        { key => "DESKTOP", value => "kde" },
+                        { key => "INSTALLONLY", value => 1 },
+                        { key => "HDDSIZEGB_1", value => 15 },
+                        { key => "HDDSIZEGB_2", value => 5 },
+                        { key => "NUMDISKS", value => "2" },
+                      ],
+                    },
+
                   ],
 }
