@@ -13,12 +13,14 @@
 use strict;
 use base "consoletest";
 use testapi;
+use utils;
 
 sub run {
     select_console 'root-console';
     # something like `test -f tmp/pids/server.pid; pumactl -P tmp/pids/server.pid stop; !test -f tmp/pids/server.pid`
     # is the correct test procedure on rails >= 5, for earlier versions we
     # need to handle this on our own
+    zypper_call 'in ruby2.5-devel gcc make';
     my $cmd = <<'EOF';
 zypper -n in -C "rubygem(rails)"
 rails new mycoolapp --skip-bundle --skip-test
