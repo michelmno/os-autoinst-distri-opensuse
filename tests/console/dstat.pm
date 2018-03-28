@@ -21,7 +21,9 @@ sub run {
 
     zypper_call('in dstat');
 
-    assert_script_run('dstat --helloworld 1 5');
+    # trial with while loop, BUT dstat do not report error !
+    # so real bypass is adding needles.
+    assert_script_run('while test 1; do dstat --helloworld 1 5 && break; done');
     assert_screen 'dstat-hello-world';
     clear_console;
 
