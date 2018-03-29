@@ -24,6 +24,10 @@ use Utils::Backends 'is_spvm';
 sub run {
     my ($self) = @_;
     select_console('root-console');
+    if (script_run('zypper search kernel-default-debuginfo')) {
+        record_soft_failure 'no repo with kernel-default-debuginfo, so do not try crash test';
+        return;
+    }
 
     # preparation for crash test
     if (is_sle '15+') {
