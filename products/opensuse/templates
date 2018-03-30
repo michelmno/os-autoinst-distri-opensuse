@@ -2801,6 +2801,552 @@
                       },
                       test_suite => { name => "toolchain_zypper" },
                     },
+#                    {
+#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      machine => { name => "ppc64le" },
+#                      prio => 50,
+#                      product => {
+#                        arch    => "ppc64le",
+#                        distri  => "opensuse",
+#                        flavor  => "DVD",
+#                        group   => "opensuse-DVD",
+#                        version => "*",
+#                      },
+#                      test_suite => { name => "install_ltp+opensuse+DVD+NETWORK" },
+#                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "install_ltp+opensuse+DVD" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_openposix" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_syscalls_ipc" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_hugetlb" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_numa" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_aio_stress_part2" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_aiodio_part4" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_crashme" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_fcntl_locktests" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_filecaps" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_fs_perms_simple" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_hyperthreading" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_input" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_io" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_lvm_part2" },
+                    },
+#                    {
+#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      machine => { name => "ppc64le" },
+#                      prio => 60,
+#                      product => {
+#                        arch    => "ppc64le",
+#                        distri  => "opensuse",
+#                        flavor  => "DVD",
+#                        group   => "opensuse-DVD",
+#                        version => "*",
+#                      },
+#                      test_suite => { name => "ltp_tirpc_tests" },
+#                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_tpm_tools" },
+                    },
+#                    {
+#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      machine => { name => "ppc64le" },
+#                      prio => 60,
+#                      product => {
+#                        arch    => "ppc64le",
+#                        distri  => "opensuse",
+#                        flavor  => "DVD",
+#                        group   => "opensuse-DVD",
+#                        version => "*",
+#                      },
+#                      test_suite => { name => "ltp_net_ipv6" },
+#                    },
+#                    {
+#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      machine => { name => "ppc64le" },
+#                      prio => 60,
+#                      product => {
+#                        arch    => "ppc64le",
+#                        distri  => "opensuse",
+#                        flavor  => "DVD",
+#                        group   => "opensuse-DVD",
+#                        version => "*",
+#                      },
+#                      test_suite => { name => "ltp_net_stress_ipsec_udp" },
+#                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_controllers" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_commands" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_kernel_misc" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_aiodio_part1" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_aiodio_part3" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_dio" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_fs_readonly" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_ima" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_io_cd" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_io_floppy" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_lvm_part1" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_sched" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_timers" },
+                    },
+#                    {
+#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      machine => { name => "ppc64le" },
+#                      prio => 60,
+#                      product => {
+#                        arch    => "ppc64le",
+#                        distri  => "opensuse",
+#                        flavor  => "DVD",
+#                        group   => "opensuse-DVD",
+#                        version => "*",
+#                      },
+#                      test_suite => { name => "ltp_net_multicast" },
+#                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_capbounds" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_fs_bind" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_kernel_sched" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_mm_oom" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_modules" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_pty" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 60,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "ltp_power_management_tests" },
+                     },
+#                    {
+#                      group_name => "openSUSE Tumbleweed PowerPC",
+#                      machine => { name => "ppc64le" },
+#                      prio => 50,
+#                      product => {
+#                        arch    => "ppc64le",
+#                        distri  => "opensuse",
+#                        flavor  => "DVD",
+#                        group   => "opensuse-DVD",
+#                        version => "*",
+#                      },
+#                      test_suite => { name => "systemd-networkd" },
+#                    },
                   ],
   Machines     => [
                     {
@@ -3240,6 +3786,7 @@
                   ],
   TestSuites   => [
                     {
+                      description => "Maintainer: okurz\n\nInstallation in textmode and selecting the textmode \"desktop\" during installation.",
                       name => "textmode",
                       settings => [
                         { key => "DESKTOP", value => "textmode" },
@@ -3719,6 +4266,30 @@
                       ],
                     },
                     {
+                      name => "minimalx-image",
+                      settings => [
+                        { key => "DESKTOP", value => "minimalx" },
+                        { key => "HDDSIZEGB", value => 40 },
+                        { key => "INSTALLONLY", value => 1 },
+                        { key => "PUBLISH_HDD_1", value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-minimalx@%MACHINE%.qcow2" },
+                        { key => "QEMU_COMPRESS_QCOW2", value => 1 },
+                        { key => "TOGGLEHOME", value => 1 },
+                      ],
+                    },
+                    {
+                      name => "tumbleweed-image",
+                      settings => [
+                        { key => "DESKTOP", value => "gnome" },
+                        { key => "HDDSIZEGB", value => 40 },
+                        { key => "INSTALLONLY", value => 1 },
+                        { key => "LINUXRC_KEXEC", value => 1 },
+                        { key => "NETBOOT", value => 0 },
+                        { key => "PUBLISH_HDD_1", value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-Tumbleweed@%MACHINE%.qcow2" },
+                        { key => "QEMU_COMPRESS_QCOW2", value => 1 },
+                        { key => "TOGGLEHOME", value => 1 },
+                      ],
+                    },
+                    {
                       description => "image creation job used as parent for other jobs testing based on existing installation. Installation in textmode and selecting the textmode \"desktop\" during installation.\nriafarov: added DISABLE_ONLINE_REPOS=1 to disable online repos during installation. See poo#17436",
                       name => "create_hdd_textmode",
                       settings => [
@@ -3748,6 +4319,1172 @@
                         { key => "NUMDISKS", value => 2 },
                         { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
                         { key => "SYSAUTHTEST", value => 1 },
+                      ],
+                    },
+                    {
+                      name => "ltp_math",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "math" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_can",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "can" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_dma_thread_diotest",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "dma_thread_diotest" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_openposix",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        {
+                          key => "LTP_COMMAND_EXCLUDE",
+                          value => "pthread_barrier_destroy_2-1",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "openposix" },
+                        { key => "LTP_COMMAND_PATTERN", value => ".*" },
+                        { key => "LTP_TIMEOUT", value => 1800 },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      description => "WARNING: QEMUCPUS removed, need to use adequate machine definition.",
+                      name => "ltp_controllers",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "controllers" },
+                        { key => "LTP_COMMAND_PATTERN", value => "^(?!memcg_stress)" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      description => "WARNING: QEMUCPUS removed, need to use adequate machine definition.",
+                      name => "ltp_syscalls",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        {
+                          key => "LTP_COMMAND_EXCLUDE",
+                          value => "_16\$|^(move_pages|msg(ctl|get|rcv|snd)|sem(ctl|get|op|snd)|shm(at|ctl|dt|get))",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "syscalls" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_syscalls_ipc",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "syscalls-ipc" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_commands",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "commands" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_fs",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "fs" },
+                        { key => "LTP_TIMEOUT", value => 1800 },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_hugetlb",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "hugetlb" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_containers",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "containers" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_kernel_misc",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "kernel_misc" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_kernel_sched",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "sched" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      description => "WARNING: QEMUCPUS QEMURAM removed, need to use adequate machine definition.",
+                      name => "ltp_mm",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_EXCLUDE", value => "^(oom|swapping)" },
+                        { key => "LTP_COMMAND_FILE", value => "mm" },
+                        { key => "QEMU_NUMA", value => 1 },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      description => "WARNING: QEMUCPUS QEMURAM removed, need to use adequate machine definition.",
+                      name => "ltp_numa",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "numa" },
+                        { key => "QEMU_NUMA", value => 1 },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_capbounds",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "cap_bounds" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_connectors",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "connectors" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      description => "WARNING: QEMUCPUS QEMURAM removed, need to use adequate machine definition.",
+                      name => "ltp_cpuhotplug",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "cpuhotplug" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_crashme",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "crashme" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_fcntl_locktests",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "fcntl-locktests" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_filecaps",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "filecaps" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_fs_bind",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "fs_bind" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_fs_ext4",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        { key => "HDDSIZEGB_2", value => 6 },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_BIG_DEV", value => "/dev/vdb" },
+                        { key => "LTP_COMMAND_FILE", value => "fs_ext4" },
+                        { key => "NUMDISKS", value => 2 },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_fs_readonly",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        { key => "HDDSIZEGB_2", value => 1 },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_BIG_DEV", value => "/dev/vdb" },
+                        { key => "LTP_COMMAND_FILE", value => "fs_readonly" },
+                        { key => "NUMDISKS", value => 2 },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_fs_perms_simple",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "fs_perms_simple" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_fsx",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "fsx" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      description => "WARNING: QEMUCPUS QEMUTHREADS removed, need to use adequate machine definition.",
+                      name => "ltp_hyperthreading",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "hyperthreading" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_ima",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "ima" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_input",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "input" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_io",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "io" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_io_cd",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "io_cd" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_io_floppy",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "io_floppy" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_ipc",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "ipc" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_aio_stress_part1",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "ltp-aio-stress.part1" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_aio_stress_part2",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "ltp-aio-stress.part2" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_aiodio_part1",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        { key => "HDDSIZEGB_2", value => 6 },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_BIG_DEV", value => "/dev/vdb" },
+                        { key => "LTP_COMMAND_FILE", value => "ltp-aiodio.part1" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_lvm_part1",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "lvm.part1" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_lvm_part2",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "lvm.part2" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_modules",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "modules" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_pipes",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "pipes" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_pty",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "pty" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_sched",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "sched" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_securebits",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "securebits" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_timers",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "timers" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_tpm_tools",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "tpm_tools" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_aiodio_part2",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        { key => "HDDSIZEGB_2", value => 6 },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_BIG_DEV", value => "/dev/vdb" },
+                        { key => "LTP_COMMAND_FILE", value => "ltp-aiodio.part2" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_aiodio_part3",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "ltp-aiodio.part3" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_aiodio_part4",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        { key => "HDDSIZEGB_2", value => 6 },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_BIG_DEV", value => "/dev/vdb" },
+                        { key => "LTP_COMMAND_FILE", value => "ltp-aiodio.part4" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      description => "WARNING: QEMUCPUS QEMURAM removed, need to use adequate machine definition.",
+                      name => "ltp_mm_oom",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "mm" },
+                        { key => "LTP_COMMAND_PATTERN", value => "^oom" },
+                        { key => "QEMU_NUMA", value => 1 },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_mm_swapping",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "mm" },
+                        { key => "LTP_COMMAND_PATTERN", value => "^swapping" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_admin_tools",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "admin_tools" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_power_management_tests",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "power_management_tests" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_power_management_tests_exclusive",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        {
+                          key => "LTP_COMMAND_FILE",
+                          value => "power_management_tests_exclusive",
+                        },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      description => "Not testing anything atm due to dependency on rsh (TODO: fix in upstream), see poo#17592.",
+                      name => "ltp_net_rpc",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_EXCLUDE", value => "rpc01|rpcinfo|rup|rusers" },
+                        { key => "LTP_COMMAND_FILE", value => "net.rpc" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "setup_ltp_networking",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_SETUP_NETWORKING", value => 1 },
+                        {
+                          key => "PUBLISH_HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_ipv6",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.ipv6" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_multicast",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.multicast" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_ipv6_lib",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.ipv6_lib" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_sctp",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.sctp" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_stress_ipsec_icmp",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_EXCLUDE", value => "rlogin|telnet" },
+                        { key => "LTP_COMMAND_FILE", value => "net_stress.ipsec_icmp" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_dio",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "dio" },
+                        { key => "LTP_TIMEOUT", value => 3600 },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      name => "ltp_tirpc_tests",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.tirpc_tests" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_rpc_tests",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.rpc_tests" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      description => "Kernel function tracing",
+                      name => "ltp_tracing",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_EXCLUDE", value => "ftrace-stress-test" },
+                        { key => "LTP_COMMAND_FILE", value => "tracing" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      description => "Run the CVE/Security tests from the development branch so that we run them as soon as possible -- WARNING: QEMUCPUS removed, need to use adequate machine definition.",
+                      name => "ltp_cve_development",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-cve.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "cve" },
+                        {
+                          key => "START_AFTER_TEST",
+                          value => "install_ltp+%DISTRI%+%FLAVOR%+CVE",
+                        },
+                      ],
+                    },
+                    {
+                      description => "Regression tests for bugs assigned CVE (Common Vulnerability and Exposure) identifiers -- WARNING: QEMUCPUS removed, need to use adequate machine definition.",
+                      name => "ltp_cve",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "cve" },
+                        { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                      ],
+                    },
+                    {
+                      description => "Used to be LTP_COMMAND_EXCLUDE=^(echo|finger|ftp|rcp|rdist|rlogin|rsh|rwho|telnet|xinetd)",
+                      name => "ltp_net_tcp_cmds",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        {
+                          key => "LTP_COMMAND_EXCLUDE",
+                          value => "^(ftp|rcp|rlogin|rsh|telnet|xinetd)",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.tcp_cmds" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_stress_interface",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net_stress.interface" },
+                        { key => "LTP_ENV", value => "MTU_CHANGE_TIMES=50" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_stress_ipsec_tcp",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net_stress.ipsec_tcp" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_stress_ipsec_udp",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net_stress.ipsec_udp" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_features",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.features" },
+                        { key => "MAX_JOB_TIME", value => 14400 },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_stress_broken_ip",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net_stress.broken_ip" },
+                        { key => "LTP_ENV", value => "NS_DURATION=300" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      name => "ltp_net_stress_ipsec_dccp",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net_stress.ipsec_dccp" },
+                        { key => "MAX_JOB_TIME", value => 86400 },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking" },
+                      ],
+                    },
+                    {
+                      description => "Test with development branch",
+                      name => "ltp_net_stress_ipsec_tcp_next",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net_stress.ipsec_tcp" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking_next" },
+                      ],
+                    },
+                    {
+                      description => "Test with development branch",
+                      name => "ltp_net_stress_ipsec_udp_next",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net_stress.ipsec_udp" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking_next" },
+                      ],
+                    },
+                    {
+                      description => "Test with development branch",
+                      name => "ltp_net_tcp_cmds_next",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network-networking.qcow2",
+                        },
+                        {
+                          key => "LTP_COMMAND_EXCLUDE",
+                          value => "^(ftp|rcp|rlogin|rsh|telnet|xinetd)",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.tcp_cmds" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking_next" },
+                      ],
+                    },
+                    {
+                      description => "Test with development branch\t\x{FFFC}",
+                      name => "ltp_net_features_next",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.features" },
+                        { key => "MAX_JOB_TIME", value => 14400 },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking_next" },
+                      ],
+                    },
+                    {
+                      description => "Test with development branch",
+                      name => "ltp_ima_next",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "ima" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking_next" },
+                      ],
+                    },
+                    {
+                      description => "Test with development branch",
+                      name => "ltp_net_ipv6_next",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.ipv6" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking_next" },
+                      ],
+                    },
+                    {
+                      description => "Test with development branch",
+                      name => "ltp_net_ipv6_lib_next",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net.ipv6_lib" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking_next" },
+                      ],
+                    },
+                    {
+                      description => "Test with development branch",
+                      name => "ltp_net_stress_ipsec_dccp_next",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net_stress.ipsec_dccp" },
+                        { key => "MAX_JOB_TIME", value => 86400 },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking_next" },
+                      ],
+                    },
+                    {
+                      description => "Test with development branch",
+                      name => "ltp_net_stress_ipsec_icmp_next",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network-networking.qcow2",
+                        },
+                        { key => "LTP_COMMAND_FILE", value => "net_stress.ipsec_icmp" },
+                        { key => "START_AFTER_TEST", value => "setup_ltp_networking_next" },
+                      ],
+                    },
+                    {
+                      description => "Test with development branch",
+                      name => "setup_ltp_networking_next",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network.qcow2",
+                        },
+                        { key => "LTP_SETUP_NETWORKING", value => 1 },
+                        {
+                          key => "PUBLISH_HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%FLAVOR%\@%MACHINE%-with-ltp-network-networking.qcow2",
+                        },
+                        {
+                          key => "START_AFTER_TEST",
+                          value => "install_ltp+%DISTRI%+%FLAVOR%+NETWORK",
+                        },
                       ],
                     },
                     {
