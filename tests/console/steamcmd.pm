@@ -21,6 +21,10 @@ use utils;
 
 sub run {
     select_console 'root-console';
+    if (script_run('zypper search steamcmd')) {
+        record_soft_failure 'no repo with steamcmd, so do not try to install';
+        return;
+    }
     zypper_call('in --auto-agree-with-licenses steamcmd');
     # see https://github.com/ValveSoftware/steam-for-linux/issues/4341
     my $allow_exit_codes = [qw(0 6 7 8)];
