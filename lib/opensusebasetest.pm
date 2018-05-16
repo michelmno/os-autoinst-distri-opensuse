@@ -62,6 +62,9 @@ sub problem_detection {
     $self->save_and_upload_log('systemctl --all --state=failed', "failed-system-services.txt", {screenshot => 1, noupload => 1});
     clear_console;
 
+    $self->save_and_upload_log('systemctl status polkit.service', "polkit_status.txt", {screenshot => 1, noupload => 1});
+    clear_console;
+
     # Unapplied configuration files
     $self->save_and_upload_log("find /* -name '*.rpmnew'", "unapplied-configuration-files.txt", {screenshot => 1, noupload => 1});
     clear_console;
