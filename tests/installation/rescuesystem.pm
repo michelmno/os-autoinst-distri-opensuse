@@ -27,7 +27,7 @@ sub run {
         select_bootmenu_more('inst-rescuesystem', 1);
     }
 
-    assert_screen 'keyboardmap-list', 120;
+    assert_screen 'keyboardmap-list', 240;
     send_key "ret";
 
     # Login as root (no password)
