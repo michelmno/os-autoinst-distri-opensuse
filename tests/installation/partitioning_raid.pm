@@ -289,11 +289,13 @@ sub add_prep_boot_partition {
     send_key 'alt-i';
     assert_screen 'partitioning_raid-file_system_id-selected';
     my $direction_key = (is_storage_ng) ? 'up' : 'down';
-    send_key_until_needlematch 'filesystem-prep', $direction_key;
-    send_key $cmd{exp_part_finish};
+    send_key_until_needlematch 'filesystem-prep', $direction_key, 5, 3;
+    wait_screen_change { send_key $cmd{exp_part_finish}; };
+    record_info('debug', "expect a new screen, after prep FS selected.");
+    save_screenshot;
     if (is_storage_ng) {
         send_key 'down';
-        send_key_until_needlematch 'custompart', 'left';
+        send_key_until_needlematch 'custompart', 'left', 5, 3;
     }
     else {
         assert_screen 'custompart';
