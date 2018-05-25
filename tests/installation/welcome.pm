@@ -93,11 +93,15 @@ sub run {
     push @welcome_tags, 'linuxrc-dhcp-question';
     ensure_fullscreen;
 
+    my $timeout = 500;
+    if (get_var("NETBOOT") && get_var('OFW') &&  not get_var("SUSEMIRROR")) {
+        $timeout *=2;
+    }
     # Process expected pop-up windows and exit when welcome/beta_war is shown or too many iterations
     while ($iterations++ < scalar(@welcome_tags)) {
         # See poo#19832, sometimes manage to match same tag twice and test fails due to broken sequence
         wait_still_screen 5;
-        assert_screen(\@welcome_tags, 500);
+        assert_screen(\@welcome_tags, $timeout);
         # Normal exit condition
         if ((match_has_tag 'inst-betawarning') || (match_has_tag 'inst-welcome') || (match_has_tag 'inst-welcome-no-product-list')) {
             last;
