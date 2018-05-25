@@ -27,6 +27,14 @@ sub start_firefox {
 
 sub run() {
     my ($self) = shift;
+    if (get_var('OFW')) {
+        record_soft_failure('brc#1498561 - firefox start failure for ppc64le');
+        return;
+    }
+    if (check_var('ARCH', 'aarch64')) {
+        record_soft_failure('firefox start failure for aarch64');
+        return;
+    }
     mouse_hide(1);
     $self->start_firefox();
     send_key "alt-h";
