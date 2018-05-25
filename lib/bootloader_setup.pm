@@ -392,7 +392,7 @@ sub bootmenu_network_source {
                 type_string_very_slow ' install=http://' . get_var("SUSEMIRROR");
             }
             else {
-                type_string_very_slow ' kernel=1 insecure=1';
+                type_string_very_slow ' kexec=3 insecure=1';
             }
         }
         else {
