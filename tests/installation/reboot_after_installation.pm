@@ -15,6 +15,14 @@ use base 'y2logsstep';
 use testapi;
 use utils;
 
+# restart shutdown by OK key
+# and check success by waiting screen change without performing an action
+sub wait_shutdown_ok {
+    my ($stilltime, $similarity) = @_;
+    send_key 'alt-o';
+    return wait_screen_change(undef, $stilltime, similarity => $similarity);
+}
+
 sub run {
     # on remote installations we can not try to switch to the installation
     # console but we never switched away, see
@@ -34,9 +42,17 @@ sub run {
         my $svirt = console('svirt');
         $svirt->change_domain_element(os => boot => {dev => 'hd'});
     }
-    wait_screen_change {
-        send_key 'alt-o';    # Reboot
-    };
+    # Similar test as in await_install.pm
+    # but now about OK key sent multiple time as long as no screen change.
+    my $counter = 5;
+    # A single changing digit is only a minor change, overide default
+    # similarity level considered a screen change
+    my $minor_change_similarity = 55;
+    while ($counter-- and not wait_shutdown_ok(5, $minor_change_similarity)) {
+        save_screenshot:
+        record_info('workaround', "While trying to trigger shutdown we expect screen change, retrying up to $counter times more");
+    }
+    save_screenshot:
 
     power_action('reboot', observe => 1, keepconsole => 1);
 }
