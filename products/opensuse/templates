@@ -398,6 +398,19 @@
                     },
                     {
                       group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "system_performance" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
                       machine => { name => "ppc64" },
                       prio => 50,
                       product => {
@@ -3471,6 +3484,19 @@
                       product => {
                         arch    => "ppc64le",
                         distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-15.0-DVD",
+                        version => "15.0",
+                      },
+                      test_suite => { name => "system_performance" },
+                    },
+                    {
+                      group_name => "openSUSE Leap 15.0 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
                         flavor  => "NET",
                         group   => "opensuse-15.0-NET",
                         version => "15.0",
@@ -5804,6 +5830,14 @@
                         { key => "NUMDISKS", value => "2" },
                       ],
                     },
-
+                    {
+                      description => "Maintainer: okurz\@suse.de\n\nAn explicit system performance test.\n\nhttps://progress.opensuse.org/issues/36100",
+                      name => "system_performance",
+                      settings => [
+                        { key => "DESKTOP", value => "gnome" },
+                        { key => "SOFTFAIL_BSC1063638", value => 1 },
+                        { key => "START_AFTER", value => "gnome" },
+                      ],
+                    },
                   ],
 }
