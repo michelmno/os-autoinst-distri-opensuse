@@ -4377,6 +4377,7 @@
                         { key => "LTP_COMMAND_PATTERN", value => ".*" },
                         { key => "LTP_TIMEOUT", value => 1800 },
                         { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                        { key => "MAX_JOB_TIME", value => 57600 },
                       ],
                     },
                     {
@@ -4392,6 +4393,7 @@
                         { key => "LTP_COMMAND_FILE", value => "controllers" },
                         { key => "LTP_COMMAND_PATTERN", value => "^(?!memcg_stress)" },
                         { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                        { key => "MAX_JOB_TIME", value => 14400 },
                       ],
                     },
                     {
@@ -4829,6 +4831,7 @@
                         },
                         { key => "LTP_COMMAND_FILE", value => "lvm.part1" },
                         { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
+                        { key => "MAX_JOB_TIME", value => 14400 },
                       ],
                     },
                     {
