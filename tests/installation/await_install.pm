@@ -114,6 +114,8 @@ sub run {
     $timeout *= 2 if check_var('MULTIPATH', 1);
     # Scale timeout
     $timeout *= get_var('TIMEOUT_SCALE', 1);
+    # PowerPC net install with default repo can be particularily slow
+    $timeout *= 2 if  (get_var("NETBOOT") && get_var('OFW') &&  not get_var("SUSEMIRROR"));
     # on s390 we might need to install additional packages depending on the installation method
     if (check_var('ARCH', 's390x')) {
         push(@tags, 'additional-packages');
