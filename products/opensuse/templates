@@ -4538,7 +4538,7 @@
                         { key => "LTP_COMMAND_PATTERN", value => ".*" },
                         { key => "LTP_TIMEOUT", value => 1800 },
                         { key => "START_AFTER_TEST", value => "install_ltp+%DISTRI%+%FLAVOR%" },
-                        { key => "MAX_JOB_TIME", value => 14400 },
+                        { key => "MAX_JOB_TIME", value => 28800 },
                       ],
                     },
                     {
