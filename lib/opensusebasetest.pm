@@ -104,6 +104,11 @@ sub problem_detection {
     type_string "mkdir -p coredumps\n";
     type_string 'awk \'/Storage|Coredump/{printf("cp %s ./coredumps/\n",$2)}\' segmentation-faults-info.txt | sh';
     type_string "\n";
+    zypper_call "in gdb";
+    script_run  "echo 'add-auto-load-safe-path' \$(pwd)'/.gdbinit' >~/.gdbinit; cat ~/.gdbinit";
+    script_run  "echo bt >.gdbinit; echo quit >>.gdbinit; cat .gdbinit";
+    #cript_run  "for xx in \$(grep -v PID segmentation-faults-list.txt | awk \'{print \$5 }\'); do coredumpctl gdb \$xx >gdb_bt_pid\$xx.log; done";
+    $self->save_and_upload_log("coredumpctl gdb", "last_coredump_backtrace.txt", {screenshot => 1, noupload => 1, timeout => 300});
     clear_console;
 
     # Broken links
