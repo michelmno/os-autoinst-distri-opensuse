@@ -18,10 +18,11 @@ use strict;
 use warnings;
 use bootbasetest;
 use testapi;
-use utils 'handle_emergency';
+use utils qw(handle_emergency zypper_call);
 use version_utils qw(is_sle is_leap is_desktop_installed is_upgrade is_sles4sap);
 use x11utils 'handle_login';
 use base 'opensusebasetest';
+use upload_system_log;
 
 sub run {
     my ($self) = @_;
@@ -69,6 +70,9 @@ sub run {
     if (!is_sle('<=15') && !is_leap('<=15.0') && check_var('ARCH', 'aarch64') && check_var('DESKTOP', 'gnome')) {
         push(@tags, 'displaymanager');
     }
+    if (check_var('DESKTOP', 'kde')) {
+        push(@tags, 'screenlocker_broken');
+    }
     # GNOME and KDE get into screenlock after 5 minutes without activities.
     # using multiple check intervals here then we can get the wrong desktop
     # screenshot at least in case desktop screenshot changed, otherwise we get
@@ -96,6 +100,37 @@ sub run {
     if (match_has_tag('kde-greeter')) {
         send_key "esc";
         assert_screen 'generic-desktop';
+    }
+    if (match_has_tag('screenlocker_broken')) {
+        my $log  = "/tmp/bt_plasmashell.log";
+        my $log2 = "/tmp/bt_plasmashell_debuginfo.log";
+        my $rcxdmstatus  = "/tmp/rcxdmstatus.log";
+        record_soft_failure('boo#1091401 - screenlocker broken detected, try to bypass');
+        send_key('ctrl-alt-f2');
+        assert_screen(["tty2-selected", 'text-login', 'text-logged-in-root']);
+        select_console('root-console');
+        assert_script_run 'loginctl unlock-session 1';
+        if (!get_var('NOLOGS'))
+        {
+            zypper_call "mr -e repo-debug";
+            zypper_call "ref";
+            record_info('BT plasmashell captured in serial console');
+            script_run("(gdb -p \$(pidof plasmashell) -ex 'thread apply all bt' -ex 'detach' -ex 'q') >$log 2>&1", 300);
+            script_run("grep 'zypper install' $log | sed -e 's/.*zypper install -C \"//; s/\"//' | xargs zypper in -y -C", 600);
+            script_run("(gdb -p \$(pidof plasmashell) -ex 'thread apply all bt' -ex 'detach' -ex 'q') >$log2 2>&1", 600);
+            upload_logs($log,     timeout => 100);
+            upload_logs($log2,    timeout => 100);
+        }
+        script_run "(echo 'env'; env) >/dev/$serialdev";
+        script_run "(echo 'sddm'; ls -ltra /run/sddm) >/dev/$serialdev";
+        script_run "(rcxdm status) >$rcxdmstatus";
+        upload_logs($rcxdmstatus, timeout => 100);
+        script_run "(killall plasmashell; xx=\$(find /run/sddm |grep run.sddm\/); env DISPLAY=:0 XAUTHORITY=\$xx QV4_FORCE_INTERPRETER=1 plasmashell &) >/dev/$serialdev";
+        script_run "sleep 10";
+        script_run "coredumpctl";
+        upload_system_logs();
+        send_key('ctrl-alt-f7');
+        assert_screen 'generic-desktop', $check_interval;
     }
 }
 
