@@ -361,6 +361,8 @@ sub script_sudo {
     }
     type_string "clear\n";    # poo#13710
     type_string "su -c \'$prog\'\n";
+    record_info("capture screenshot just after type_string call, to avoid password failure");
+    save_screenshot;
     handle_password_prompt unless ($testapi::username eq 'root');
     if ($wait > 0) {
         return wait_serial("$str-\\d+-");
