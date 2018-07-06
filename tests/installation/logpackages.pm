@@ -30,7 +30,7 @@ sub run {
     }
     select_console 'install-shell';
     script_run "(cat /.timestamp ; echo /.packages.initrd: ; cat /.packages.initrd) > /dev/$serialdev";
-    script_run "(echo /.packages.root: ; cat /.packages.root) > /dev/$serialdev";
+    script_run "(echo /.packages.root: ; cat /.packages.root; echo 'uname -a:'; uname -a) > /dev/$serialdev";
     save_screenshot;
     select_console 'installation';
 }
