@@ -100,6 +100,14 @@ sub run {
 
         # confirm
         send_key $cmd{install};
+
+        # accept unknown gnupg key if present
+        check_screen("unknown_gnupg_key", 5);
+        if (match_has_tag("unknown_gnupg_key")) {
+            send_key "alt-a"; # do not show again
+            send_key "alt-y"; # use anyway
+        }
+
         assert_screen "inst-packageinstallationstarted", $started_timeout;
     }
     if (!get_var("LIVECD")
