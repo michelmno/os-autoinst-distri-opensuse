@@ -121,6 +121,19 @@
                         group   => "opensuse-DVD",
                         version => "*",
                       },
+                      test_suite => { name => "install_only" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
                       test_suite => { name => "minimalx" },
                     },
                     {
