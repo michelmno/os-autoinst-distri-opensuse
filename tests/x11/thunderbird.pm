@@ -16,6 +16,10 @@ use strict;
 use testapi;
 
 sub run {
+    if (get_var('OFW')) {
+        record_soft_failure('brc#1498561 - no thunderbird for ppc64/ppc64le');
+        return;
+    }
     ensure_installed("MozillaThunderbird");
     x11_start_program('thunderbird');
     wait_screen_change {
