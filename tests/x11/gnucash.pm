@@ -16,6 +16,10 @@ use strict;
 use testapi;
 
 sub run {
+    if (check_var('ARCH', 'ppc64')) {
+        record_soft_failure('brc#1498561 - no gnucash found for ppc64 (BE)');
+        return;
+    }
     ensure_installed('gnucash gnucash-docs yelp');
     x11_start_program('gnucash');
     send_key "ctrl-h";    # open user tutorial
