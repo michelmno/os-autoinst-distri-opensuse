@@ -18,6 +18,11 @@ use testapi;
 use version_utils 'is_leap';
 
 sub run {
+    if (check_var('ARCH', 'ppc64')) {
+        record_soft_failure('brc#1498561 - no gnucash found for ppc64 (BE)');
+        return;
+    }
+
     select_console('x11');
 
     ensure_installed('gnucash gnucash-docs yelp');
