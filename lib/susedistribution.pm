@@ -332,7 +332,7 @@ sub ensure_installed {
     }
     my $ret = wait_serial('pkcon-status-\d+');
     if ($ret =~ /pkcon-status-4/) {
-        record_info "boo#1091353 - pkcon doesn't find $pkglist - falling back to zypper";
+        record_soft_failure "boo#1091353 - pkcon doesn't find $pkglist - falling back to zypper";
         $self->_ensure_installed_zypper_fallback($pkglist);
     }
     elsif ($ret =~ /pkcon-status-5/) {
