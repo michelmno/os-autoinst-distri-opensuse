@@ -128,7 +128,7 @@ sub init_desktop_runner {
 
     mouse_hide(1);
     if (!check_screen('desktop-runner', $timeout)) {
-        record_info('workaround', 'desktop-runner does not show up on alt-f2, retrying up to three times (see bsc#978027)');
+        record_soft_failure('workaround', 'desktop-runner does not show up on alt-f2, retrying up to three times (see bsc#978027)');
         send_key 'esc';    # To avoid failing needle on missing 'alt' key - poo#20608
         send_key_until_needlematch 'desktop-runner', 'alt-f2', 3, 10;
     }
@@ -261,7 +261,7 @@ sub ensure_installed {
     }
     my $ret = wait_serial('pkcon-status-\d+');
     if ($ret =~ /pkcon-status-4/) {
-        record_info "boo#1091353 - pkcon doesn't find $pkglist - falling back to zypper";
+        record_soft_failure "boo#1091353 - pkcon doesn't find $pkglist - falling back to zypper";
         $self->_ensure_installed_zypper_fallback($pkglist);
     }
     elsif ($ret =~ /pkcon-status-5/) {
