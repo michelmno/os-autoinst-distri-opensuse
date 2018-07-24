@@ -25,13 +25,14 @@ sub system_status {
     my ($self, $log) = @_;
     $log //= "/tmp/system-status.log";
 
-    my @klst = ("kernel", "cpuinfo", "memory", "repos", "lspci");
+    my @klst = ("kernel", "cpuinfo", "memory", "repos", "lspci", "psaxf");
     my %cmds = (
         kernel  => "uname -a",
         cpuinfo => "cat /proc/cpuinfo",
         memory  => "free -m",
         repos   => "zypper repos -u",
         lspci   => "lspci",
+        psaxf   => "ps axf",
     );
 
     foreach my $key (@klst) {
