@@ -33,6 +33,7 @@ sub system_status {
         repos                      => "zypper repos -u",
         lspci                      => "lspci",
         lsmod                      => "lsmod",
+        psaxf                      => "ps axf",
         '/proc/sys/kernel/tainted' => "cat /proc/sys/kernel/tainted",
     );
 
