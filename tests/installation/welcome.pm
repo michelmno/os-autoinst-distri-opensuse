@@ -91,6 +91,7 @@ sub run {
     # Add tag to check for https://progress.opensuse.org/issues/30823 "test is
     # stuck in linuxrc asking if dhcp should be used"
     push @welcome_tags, 'linuxrc-dhcp-question';
+    push @welcome_tags, 'linuxrc_red_popup';
     ensure_fullscreen;
 
     my $timeout = 500;
@@ -127,6 +128,10 @@ sub run {
         }
         if (match_has_tag 'linuxrc-dhcp-question') {
             send_key 'ret';
+        }
+        if (match_has_tag 'linuxrc_red_popup') {
+            send_key 'ret';
+            # TODO how to capture data ?
         }
     }
 
