@@ -2810,7 +2810,20 @@
                         distri  => "sle",
                         flavor  => "Server-DVD",
                         group   => "sle-12-SP3-Server-DVD",
-                        version => "*",
+                        version => "12-SP3",
+                      },
+                      test_suite => { name => "install_gnome" }
+                    },
+                    {
+                      group_name => "SLES 12 SP4 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "sle",
+                        flavor  => "Server-DVD",
+                        group   => "sle-12-SP4-Server-DVD",
+                        version => "12-SP4",
                       },
                       test_suite => { name => "install_gnome" }
                     },
@@ -3989,7 +4002,20 @@
                                     { key => "NOIMAGES", value => 1 },
                                     { key => "SCC_REGISTER", value => "never" },
                                   ],
-                      version  => "*",
+                      version  => "12-SP3",
+                    },
+                    {
+                      description => "force SCC_REGISTER to avoid registration.",
+                      arch     => "ppc64le",
+                      distri   => "sle",
+                      flavor   => "Server-DVD",
+                      settings => [
+                                    { key => "DVD", value => 1 },
+                                    { key => "ISO_MAXSIZE", value => 4700372992 },
+                                    { key => "NOIMAGES", value => 1 },
+                                    { key => "SCC_REGISTER", value => "never" },
+                                  ],
+                      version  => "12-SP4",
                     },
                     {
                       description => "force SCC_REGISTER to avoid registration.",
