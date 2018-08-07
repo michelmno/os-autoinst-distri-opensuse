@@ -654,7 +654,7 @@ sub need_clear_repos {
       && !get_var('BOOT_TO_SNAPSHOT')
       && !get_var('LIVETEST')
       && !get_var('DUALBOOT')
-      && (is_opensuse && !is_updates_tests)
+      && (is_opensuse && !is_updates_tests && (get_var('SUSEMIRROR') || is_staging()))
       && !(is_jeos && !is_staging)
       || (is_sle && get_var("FLAVOR", '') =~ m/^Staging2?[\-]DVD$/ && get_var("SUSEMIRROR"));
 }
