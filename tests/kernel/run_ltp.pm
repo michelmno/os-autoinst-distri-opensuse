@@ -230,7 +230,7 @@ sub record_ltp_result {
         $export_details->{test}->{result} = 'CONF';
     }
     else {
-        die 'No LTP test result was parsed from the log';
+        die "No LTP test result was parsed from the log $test_log";
     }
 
     say $fh "Test took approximately $duration seconds";
