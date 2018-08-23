@@ -4707,7 +4707,7 @@
                       ],
                     },
                     {
-                      description => "Maintainer: zluo, riafarov\n\nTest for yast2 UI, GUI only. Running on created gnome images which provides both text console for ncurses UI tests as well as the gnome environment for the GUI tests.\n\nTemporarily added YAST2_GUI_TERMINATE_PREVIOUS_INSTANCES to see if helps. This variable triggers code which terminates all yast2 processes before starting new one. (see poo#26104).",
+                      description => "Maintainer: zluo, riafarov\n\nTest for yast2 UI, GUI only. Running on created gnome images which provides both text console for ncurses UI tests as well as the gnome environment for the GUI tests.\n\nTemporarily added YAST2_GUI_TERMINATE_PREVIOUS_INSTANCES to see if helps. This variable triggers code which terminates all yast2 processes before starting new one. (see poo#26104).\nKEEP_ONLINE_REPO added for abanc, may be also in o3 for PowerPC as not correct repo (TODO)",
                       name => "yast2_gui",
                       settings => [
                         { key => "BOOT_HDD_IMAGE", value => 1 },
@@ -4724,6 +4724,7 @@
                           value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%-uefi-vars.qcow2",
                         },
                         { key => "Y2UITEST_GUI", value => 1 },
+                        { key => "KEEP_ONLINE_REPOS", value => 1 },
                       ],
                     },
                     {
