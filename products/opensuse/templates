@@ -2971,7 +2971,7 @@
                       test_suite => { name => "toolchain_zypper" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 50,
                       product => {
@@ -2984,7 +2984,7 @@
                       test_suite => { name => "install_ltp+opensuse+DVD+NETDEV" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 50,
                       product => {
@@ -2997,7 +2997,7 @@
                       test_suite => { name => "install_ltp+opensuse+DVD" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3010,7 +3010,7 @@
                       test_suite => { name => "ltp_can" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3023,7 +3023,7 @@
                       test_suite => { name => "ltp_containers" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3036,7 +3036,7 @@
                       test_suite => { name => "ltp_cpuhotplug" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3049,7 +3049,7 @@
                       test_suite => { name => "ltp_cve" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3062,7 +3062,7 @@
                       test_suite => { name => "ltp_dma_thread_diotest" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3075,7 +3075,7 @@
                       test_suite => { name => "ltp_fs" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3088,7 +3088,7 @@
                       test_suite => { name => "ltp_fs_ext4" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3101,7 +3101,7 @@
                       test_suite => { name => "ltp_fsx" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3114,7 +3114,7 @@
                       test_suite => { name => "ltp_ima_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3127,7 +3127,7 @@
                       test_suite => { name => "ltp_ipc" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3140,7 +3140,7 @@
                       test_suite => { name => "ltp_math" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3153,7 +3153,7 @@
                       test_suite => { name => "ltp_mm" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3166,7 +3166,7 @@
                       test_suite => { name => "ltp_mm_swapping" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3179,7 +3179,7 @@
                       test_suite => { name => "ltp_net_features" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3192,7 +3192,7 @@
                       test_suite => { name => "ltp_net_features_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3205,7 +3205,7 @@
                       test_suite => { name => "ltp_net_ipv6_lib" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3218,7 +3218,7 @@
                       test_suite => { name => "ltp_net_ipv6_lib_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3231,7 +3231,7 @@
                       test_suite => { name => "ltp_net_ipv6_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3244,7 +3244,7 @@
                       test_suite => { name => "ltp_net_rpc_tests" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3257,7 +3257,7 @@
                       test_suite => { name => "ltp_net_sctp" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3270,7 +3270,7 @@
                       test_suite => { name => "ltp_net_stress_broken_ip" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3283,7 +3283,7 @@
                       test_suite => { name => "ltp_net_stress_interface" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3296,7 +3296,7 @@
                       test_suite => { name => "ltp_net_stress_interface_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3309,7 +3309,7 @@
                       test_suite => { name => "ltp_net_stress_ipsec_dccp" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3322,7 +3322,7 @@
                       test_suite => { name => "ltp_net_stress_ipsec_dccp_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3335,7 +3335,7 @@
                       test_suite => { name => "ltp_net_stress_ipsec_icmp" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3348,7 +3348,7 @@
                       test_suite => { name => "ltp_net_stress_ipsec_icmp_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3361,7 +3361,7 @@
                       test_suite => { name => "ltp_net_stress_ipsec_sctp" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3374,7 +3374,7 @@
                       test_suite => { name => "ltp_net_stress_ipsec_sctp_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3387,7 +3387,7 @@
                       test_suite => { name => "ltp_net_stress_ipsec_tcp" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3400,7 +3400,7 @@
                       test_suite => { name => "ltp_net_stress_ipsec_tcp_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3413,7 +3413,7 @@
                       test_suite => { name => "ltp_net_stress_ipsec_udp_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3426,7 +3426,7 @@
                       test_suite => { name => "ltp_net_stress_route_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3439,7 +3439,7 @@
                       test_suite => { name => "ltp_net_tcp_cmds" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3452,7 +3452,7 @@
                       test_suite => { name => "ltp_net_tcp_cmds_next" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3465,7 +3465,7 @@
                       test_suite => { name => "ltp_net_tirpc_tests" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3478,7 +3478,7 @@
                       test_suite => { name => "ltp_pipes" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3491,7 +3491,7 @@
                       test_suite => { name => "ltp_power_management_tests_exclusive" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3504,7 +3504,7 @@
                       test_suite => { name => "ltp_securebits" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3517,7 +3517,7 @@
                       test_suite => { name => "ltp_syscalls" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3530,7 +3530,7 @@
                       test_suite => { name => "ltp_tracing" },
                     },
 #                    {
-#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      group_name => "openSUSE Tumbleweed Kernel",
 #                      machine => { name => "ppc64le" },
 #                      prio => 60,
 #                      product => {
@@ -3543,7 +3543,7 @@
 #                      test_suite => { name => "ltp_openposix" },
 #                    },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3556,7 +3556,7 @@
                       test_suite => { name => "ltp_syscalls_ipc" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3569,7 +3569,7 @@
                       test_suite => { name => "ltp_hugetlb" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3582,7 +3582,7 @@
                       test_suite => { name => "ltp_numa" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3595,7 +3595,7 @@
                       test_suite => { name => "ltp_aio_stress_part1" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3608,7 +3608,7 @@
                       test_suite => { name => "ltp_aio_stress_part2" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3621,7 +3621,7 @@
                       test_suite => { name => "ltp_aiodio_part4" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3634,7 +3634,7 @@
                       test_suite => { name => "ltp_crashme" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3647,7 +3647,7 @@
                       test_suite => { name => "ltp_fcntl_locktests" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3660,7 +3660,7 @@
                       test_suite => { name => "ltp_filecaps" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3673,7 +3673,7 @@
                       test_suite => { name => "ltp_fs_perms_simple" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3686,7 +3686,7 @@
                       test_suite => { name => "ltp_hyperthreading" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3699,7 +3699,7 @@
                       test_suite => { name => "ltp_input" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3712,7 +3712,7 @@
                       test_suite => { name => "ltp_io" },
                     },
 #                    {
-#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      group_name => "openSUSE Tumbleweed Kernel",
 #                      machine => { name => "ppc64le" },
 #                      prio => 60,
 #                      product => {
@@ -3725,7 +3725,7 @@
 #                      test_suite => { name => "ltp_lvm_part2" },
 #                    },
 #                    {
-#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      group_name => "openSUSE Tumbleweed Kernel",
 #                      machine => { name => "ppc64le" },
 #                      prio => 60,
 #                      product => {
@@ -3738,7 +3738,7 @@
 #                      test_suite => { name => "ltp_tirpc_tests" },
 #                    },
 #                    {
-#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      group_name => "openSUSE Tumbleweed Kernel",
 #                      machine => { name => "ppc64le" },
 #                      prio => 60,
 #                      product => {
@@ -3751,7 +3751,7 @@
 #                      test_suite => { name => "ltp_tpm_tools" },
 #                    },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3764,7 +3764,7 @@
                       test_suite => { name => "ltp_net_ipv6" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3777,7 +3777,7 @@
                       test_suite => { name => "ltp_net_stress_ipsec_udp" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3790,7 +3790,7 @@
                       test_suite => { name => "ltp_controllers" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3803,7 +3803,7 @@
                       test_suite => { name => "ltp_commands" },
                     },
 #                    {
-#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      group_name => "openSUSE Tumbleweed Kernel",
 #                      machine => { name => "ppc64le" },
 #                      prio => 60,
 #                      product => {
@@ -3816,7 +3816,7 @@
 #                      test_suite => { name => "ltp_kernel_misc" },
 #                    },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3829,7 +3829,7 @@
                       test_suite => { name => "ltp_aiodio_part1" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3842,7 +3842,7 @@
                       test_suite => { name => "ltp_aiodio_part2" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3855,7 +3855,7 @@
                       test_suite => { name => "ltp_aiodio_part3" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3868,7 +3868,7 @@
                       test_suite => { name => "ltp_dio" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3881,7 +3881,7 @@
                       test_suite => { name => "ltp_fs_readonly" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3894,7 +3894,7 @@
                       test_suite => { name => "ltp_ima" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3907,7 +3907,7 @@
                       test_suite => { name => "ltp_io_cd" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3920,7 +3920,7 @@
                       test_suite => { name => "ltp_io_floppy" },
                     },
 #                    {
-#                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+#                      group_name => "openSUSE Tumbleweed Kernel",
 #                      machine => { name => "ppc64le" },
 #                      prio => 60,
 #                      product => {
@@ -3933,7 +3933,7 @@
 #                      test_suite => { name => "ltp_lvm_part1" },
 #                    },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3946,7 +3946,7 @@
                       test_suite => { name => "ltp_sched" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3959,7 +3959,7 @@
                       test_suite => { name => "ltp_timers" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3972,7 +3972,7 @@
                       test_suite => { name => "ltp_net_multicast" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3985,7 +3985,7 @@
                       test_suite => { name => "ltp_capbounds" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -3998,7 +3998,7 @@
                       test_suite => { name => "ltp_fs_bind" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -4011,7 +4011,7 @@
                       test_suite => { name => "ltp_kernel_sched" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -4024,7 +4024,7 @@
                       test_suite => { name => "ltp_mm_oom" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -4037,7 +4037,7 @@
                       test_suite => { name => "ltp_modules" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
@@ -4050,7 +4050,7 @@
                       test_suite => { name => "ltp_pty" },
                     },
                     {
-                      group_name => "openSUSE Tumbleweed Kernel PowerPC",
+                      group_name => "openSUSE Tumbleweed Kernel",
                       machine => { name => "ppc64le" },
                       prio => 60,
                       product => {
