@@ -320,6 +320,19 @@
                     },
                     {
                       group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "docker_image" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
                       machine => { name => "ppc64" },
                       prio => 50,
                       product => {
@@ -4921,6 +4934,22 @@
                         { key => "DESKTOP", value => "textmode" },
                         { key => "INSTALLONLY", value => 1 },
                         { key => "HDDSIZEGB", value => 40 },
+                      ],
+                    },
+                    {
+                      description => "Maintainer: fvogt\@suse.com This test's main job is to configure a docker host and install the docker image built within the current product and test it.",
+                      name => "docker_image",
+                      settings => [
+                        { key => "BOOT_HDD_IMAGE", value => 1 },
+                        { key => "DESKTOP", value => "textmode" },
+                        { key => "DOCKER_IMAGE_TEST", value => 1 },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "NUMDISKS", value => 2 },
+                        { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
+                        { key => "SYSAUTHTEST", value => 1 },
                       ],
                     },
                     {
