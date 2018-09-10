@@ -124,7 +124,7 @@ sub install_runtime_dependencies_network {
       dhcp-client
       telnet
     );
-    zypper_call('-t in ' . join(' ', @deps), dumb_term => 1);
+    zypper_call('-t in ' . join(' ', @deps));
 
     # services
     @deps = qw(
@@ -135,7 +135,7 @@ sub install_runtime_dependencies_network {
       rsync
       vsftpd
     );
-    zypper_call('-t in ' . join(' ', @deps), dumb_term => 1);
+    zypper_call('-t in ' . join(' ', @deps));
 }
 
 sub install_build_dependencies {
