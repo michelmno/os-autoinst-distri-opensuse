@@ -39,14 +39,20 @@ sub get_ip_address {
 
 sub get_to_console {
     my @tags = qw(yast-still-running linuxrc-install-fail linuxrc-repo-not-found);
-    my $ret  = check_screen(\@tags, 5);
-    if ($ret && match_has_tag("linuxrc-repo-not-found")) {    # KVM only
-        send_key "ctrl-alt-f9";
-        assert_screen "inst-console";
-        type_string "blkid\n";
-        save_screenshot();
-        wait_screen_change { send_key 'ctrl-alt-f3' };
-        save_screenshot();
+    my $ret = check_screen(\@tags, 5);
+    if ($ret && match_has_tag("linuxrc-repo-not-found")) {
+        send_key 'tab'; send_key 'ret'; # back from url panel
+        save_screenshot;
+        send_key 'tab'; send_key 'ret'; # back from language panel
+        save_screenshot;
+        send_key 'tab'; send_key 'ret'; # back from keyboard panel
+        save_screenshot;
+        for my $i (1 .. 2) { send_key "down"; }; send_key 'ret'; # switch to expert panel
+        save_screenshot;
+        for my $i (1 .. 6) { send_key "down"; }; send_key 'ret'; # switch to shell script
+        save_screenshot;
+        assert_script_run "tar czf /tmp/varlogs_linuxrc.tar.bz2 /var/log";
+        upload_logs "/tmp/varlogs_linuxrc.tar.bz2";
     }
     elsif ($ret) {
         select_console('install-shell');

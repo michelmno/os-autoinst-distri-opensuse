@@ -92,6 +92,7 @@ sub run {
     # stuck in linuxrc asking if dhcp should be used"
     push @welcome_tags, 'linuxrc-dhcp-question';
     push @welcome_tags, 'linuxrc_red_popup';
+    push @welcome_tags, 'linuxrc-repo-not-found';
     ensure_fullscreen;
 
     my $timeout = 500;
@@ -126,12 +127,14 @@ sub run {
             wait_still_screen 5;
             next;
         }
+        if (match_has_tag 'linuxrc-repo-not-found') {
+            die 'linuxrc do not find repo';
+        }
         if (match_has_tag 'linuxrc-dhcp-question') {
-            send_key 'ret';
+            die 'linuxrc wait on dhcp pending question';
         }
         if (match_has_tag 'linuxrc_red_popup') {
-            send_key 'ret';
-            # TODO how to capture data ?
+            die 'linuxrc red popup';
         }
     }
 
