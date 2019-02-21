@@ -4922,8 +4922,12 @@
                       settings => [{ key => "DESKTOP", value => "gnome" }],
                     },
                     {
+                      description => "MAX_JOB_TIME for bypass poo#44408",
                       name => "minimalx",
-                      settings => [{ key => "DESKTOP", value => "minimalx" }],
+                      settings => [
+                        { key => "DESKTOP", value => "minimalx" },
+                        { key => "MAX_JOB_TIME", value => 10800 },
+                      ],
                     },
                     {
                       name => "minimalx+btrfs+nosephome",
@@ -5177,10 +5181,12 @@
                       ],
                     },
                     {
+                      description => "MAX_JOB_TIME  set as per poo#46682",
                       name => "lvm",
                       settings => [
                         { key => "DESKTOP", value => "minimalx" },
                         { key => "LVM", value => 1 },
+                        { key => "MAX_JOB_TIME", value => 9000 },
                         { key => "START_AFTER_TEST", value => "RAID0" },
                       ],
                     },
