@@ -4918,8 +4918,12 @@
                       ],
                     },
                     {
+                      description => "MAX_JOB_TIME for bypass poo#44408",
                       name => "gnome",
-                      settings => [{ key => "DESKTOP", value => "gnome" }],
+                      settings => [
+                        { key => "DESKTOP", value => "gnome" },
+                        { key => "MAX_JOB_TIME", value => 14400 },
+                      ],
                     },
                     {
                       description => "MAX_JOB_TIME for bypass poo#44408",
