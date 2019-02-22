@@ -4387,6 +4387,58 @@
                       },
                       test_suite => { name => "gnome" },
                     },
+                    {
+                      group_name => "openSUSE Leap 15 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-15.1-DVD",
+                        version => 15.1,
+                      },
+                      test_suite => { name => "extra_tests_in_textmode" },
+                    },
+                    {
+                      group_name => "openSUSE Leap 15 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-15.1-DVD",
+                        version => 15.1,
+                      },
+                      test_suite => { name => "extra_tests_on_gnome" },
+                    },
+                    {
+                      group_name => "openSUSE Leap 15 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-15.1-DVD",
+                        version => 15.1,
+                      },
+                      test_suite => { name => "yast2_ncurses" },
+                    },
+                    {
+                      group_name => "openSUSE Leap 15 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-15.1-DVD",
+                        version => 15.1,
+                      },
+                      test_suite => { name => "RAID0" },
+                    },
                   ],
   Machines     => [
                     {
@@ -5424,15 +5476,20 @@
                       ],
                     },
                     {
+                      description => "Maintainer: okurz\@suse.de\n\nMainly console extratest.",
                       name => "extra_tests_in_textmode",
                       settings => [
                         { key => "BOOT_HDD_IMAGE", value => 1 },
                         { key => "DESKTOP", value => "textmode" },
-                        { key => "EXTRATEST", value => 1 },
+                        {
+                          key => "EXTRATEST",
+                          value => "prepare,zypper,console,opensuse,docker,kdump",
+                        },
                         {
                           key => "HDD_1",
                           value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
                         },
+                        { key => "MAX_JOB_TIME", value => 14400 },
                         { key => "NUMDISKS", value => 2 },
                         { key => "START_AFTER_TEST", value => "create_hdd_textmode" },
                         { key => "SYSAUTHTEST", value => 1 },
@@ -5478,7 +5535,10 @@
                       settings => [
                         { key => "BOOT_HDD_IMAGE", value => 1 },
                         { key => "DESKTOP", value => "gnome" },
-                        { key => "EXTRATEST", value => 1 },
+                        {
+                          key => "EXTRATEST",
+                          value => "prepare,desktop",
+                        },
                         {
                           key => "HDD_1",
                           value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
@@ -5537,18 +5597,21 @@
                       settings => [
                         { key => "BOOT_HDD_IMAGE", value => 1 },
                         { key => "DESKTOP", value => "gnome" },
+                        {
+                          key => "EXTRATEST",
+                          value => "prepare,y2uitest_ncurses",
+                        },
                         { key => "HDDSIZEGB", value => 20 },
                         {
                           key => "HDD_1",
                           value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
                         },
                         { key => "START_AFTER_TEST", value => "create_hdd_gnome" },
-                        { key => "TIMEOUT_SCALE", value => 3 },
+                        { key => "TIMEOUT_SCALE", value => 5 },
                         {
                           key => "UEFI_PFLASH_VARS",
                           value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%-uefi-vars.qcow2",
                         },
-                        { key => "Y2UITEST_NCURSES", value => 1 },
                       ],
                     },
                     {
