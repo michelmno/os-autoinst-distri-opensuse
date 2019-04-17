@@ -123,6 +123,58 @@
                       },
                       test_suite => { name => "create_hdd_gnome" },
                     },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "create_hdd_kde" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "extra_tests_on_kde" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "create_hdd_xfce" },
+                    },
+                    {
+                      group_name => "openSUSE Tumbleweed PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-DVD",
+                        version => "*",
+                      },
+                      test_suite => { name => "extra_tests_on_xfce" },
+                    },
 #                    {
 #                      group_name => "openSUSE Tumbleweed PowerPC",
 #                      machine => { name => "ppc64le" },
@@ -4385,6 +4437,58 @@
                         group   => "opensuse-15.1-DVD",
                         version => 15.1,
                       },
+                      test_suite => { name => "create_hdd_kde" },
+                    },
+                    {
+                      group_name => "openSUSE Leap 15 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-15.1-DVD",
+                        version => 15.1,
+                      },
+                      test_suite => { name => "extra_tests_on_kde" },
+                    },
+                    {
+                      group_name => "openSUSE Leap 15 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-15.1-DVD",
+                        version => 15.1,
+                      },
+                      test_suite => { name => "create_hdd_xfce" },
+                    },
+                    {
+                      group_name => "openSUSE Leap 15 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-15.1-DVD",
+                        version => 15.1,
+                      },
+                      test_suite => { name => "extra_tests_on_xfce" },
+                    },
+                    {
+                      group_name => "openSUSE Leap 15 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-15.1-DVD",
+                        version => 15.1,
+                      },
                       test_suite => { name => "create_hdd_textmode" },
                     },
                     {
@@ -4451,6 +4555,19 @@
                         version => 15.1,
                       },
                       test_suite => { name => "RAID0" },
+                    },
+                    {
+                      group_name => "openSUSE Leap 15 PowerPC",
+                      machine => { name => "ppc64le" },
+                      prio => 50,
+                      product => {
+                        arch    => "ppc64le",
+                        distri  => "opensuse",
+                        flavor  => "DVD",
+                        group   => "opensuse-15.1-DVD",
+                        version => 15.1,
+                      },
+                      test_suite => { name => "docker_image" },
                     },
                     {
                       group_name => "openSUSE Leap 15 PowerPC",
@@ -4955,7 +5072,6 @@
                       distri   => "opensuse",
                       flavor   => "DVD",
                       settings => [
-                                    { key => "BETA", value => 1 },
                                     { key => "ISO_MAXSIZE", value => 4700372992 },
                                     { key => "NOIMAGES", value => 1 },
                                     { key => "OFW", value => 1 },
@@ -4968,7 +5084,6 @@
                       distri   => "opensuse",
                       flavor   => "NET",
                       settings => [
-                                    { key => "BETA", value => 1 },
                                     { key => "ISO_MAXSIZE", value => 737280000 },
                                     { key => "NETBOOT", value => 1 },
                                     { key => "OFW", value => 1 },
@@ -4986,7 +5101,16 @@
                         { key => "VIDEOMODE", value => "text" },
                       ],
                     },
-                    { name => "kde", settings => [{ key => "DESKTOP", value => "kde" }] },
+                    {
+                      description => "TIMEOUT_SCALE property is added to avoid sporadic shutdown fails in kde\@USBboot_64 scenario.\n\nAdded by : oorlov; \n\nRelated ticket: poo#37000",
+                      name => "kde",
+                      settings => [
+                        { key => "DESKTOP", value => "kde" },
+                        { key => "HDDSIZEGB", value => 40 },
+                        { key => "TIMEOUT_SCALE", value => 3 },
+                        { key => "MAX_JOB_TIME", value => 14400 },
+                      ],
+                    },
                     {
                       name => "uefi",
                       settings => [
@@ -5000,7 +5124,7 @@
                       name => "gnome",
                       settings => [
                         { key => "DESKTOP", value => "gnome" },
-                        { key => "MAX_JOB_TIME", value => 14400 },
+                        { key => "MAX_JOB_TIME", value => 28800 },
                       ],
                     },
                     {
@@ -5239,7 +5363,7 @@
                       settings => [
                         { key => "BOOT_HDD_IMAGE", value => 1 },
                         { key => "DESKTOP", value => "textmode" },
-                        { key => "DOCKER_IMAGE_TEST", value => 1 },
+                        { key => "EXTRATEST", value => "docker" },
                         {
                           key => "HDD_1",
                           value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
@@ -5423,10 +5547,26 @@
                       settings => [
                         { key => "BOOT_HDD_IMAGE", value => 1 },
                         { key => "DESKTOP", value => "kde" },
-                        { key => "HDD_1", value => "kde_image.qcow2" },
-                        { key => "START_AFTER_TEST", value => "install-kde-image" },
-                        { key => "EXTRATEST", value => 1 },
+                        { key => "EXTRATEST", value => "prepare,desktop" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "START_AFTER_TEST", value => "create_hdd_kde" },
                         { key => "SYSAUTHTEST", value => 1 },
+                      ],
+                    },
+                    {
+                      name => "create_hdd_kde",
+                      settings => [
+                        { key => "DESKTOP", value => "kde" },
+                        { key => "HDDSIZEGB", value => 40 },
+                        { key => "INSTALLONLY", value => 1 },
+                        {
+                          key => "PUBLISH_HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-kde\@%MACHINE%.qcow2",
+                        },
+                        { key => "QEMU_COMPRESS_QCOW2", value => 1 },
                       ],
                     },
                     {
@@ -5434,21 +5574,27 @@
                       settings => [
                         { key => "BOOT_HDD_IMAGE", value => 1 },
                         { key => "DESKTOP", value => "xfce" },
-                        { key => "HDD_1", value => "xfce_image.qcow2" },
-                        { key => "START_AFTER_TEST", value => "install-xfce-image" },
-                        { key => "EXTRATEST", value => 1 },
+                        { key => "EXTRATEST", value => "prepare,desktop" },
+                        {
+                          key => "HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-%DESKTOP%\@%MACHINE%.qcow2",
+                        },
+                        { key => "START_AFTER_TEST", value => "create_hdd_xfce" },
                         { key => "SYSAUTHTEST", value => 1 },
                       ],
                     },
                     {
-                      name => "extra_tests_on_lxde",
+                      name => "create_hdd_xfce",
                       settings => [
-                        { key => "BOOT_HDD_IMAGE", value => 1 },
-                        { key => "DESKTOP", value => "lxde" },
-                        { key => "HDD_1", value => "lxde_image.qcow2" },
-                        { key => "START_AFTER_TEST", value => "install-lxde-image" },
-                        { key => "EXTRATEST", value => 1 },
-                        { key => "SYSAUTHTEST", value => 1 },
+                        { key => "DESKTOP", value => "xfce" },
+                        { key => "HDDSIZEGB", value => 40 },
+                        { key => "INSTALLONLY", value => 1 },
+                        { key => "PATTERNS", value => "default,xfce" },
+                        {
+                          key => "PUBLISH_HDD_1",
+                          value => "%DISTRI%-%VERSION%-%ARCH%-%BUILD%-xfce\@%MACHINE%.qcow2",
+                        },
+                        { key => "QEMU_COMPRESS_QCOW2", value => 1 },
                       ],
                     },
                     {
@@ -6991,6 +7137,7 @@
                       name => "system_performance",
                       settings => [
                         { key => "DESKTOP", value => "gnome" },
+                        { key => "MAX_JOB_TIME", value => 28800 },
                         { key => "SOFTFAIL_BSC1063638", value => 1 },
                         { key => "START_AFTER", value => "gnome" },
                       ],
