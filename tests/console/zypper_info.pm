@@ -49,7 +49,7 @@ sub run {
     # check for zypper info
     test_package_output;
 
-    if (is_sle('>=12-SP2') || is_opensuse) {
+    if (is_sle('>=12-SP2') || (is_opensuse && !is_leap)) {
         prepare_source_repo;
         test_srcpackage_output;
         disable_source_repo;
