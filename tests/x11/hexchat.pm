@@ -35,12 +35,16 @@ sub run {
     }
     else {
         x11_start_program($name, target_match => "$name-network-select");
-        type_string "freenode\n";
+#       type_string "freenode\n";
         assert_and_click "hexchat-nick-$username";
+	save_screenshot;
         send_key 'ctrl-a';
+	save_screenshot;
         send_key 'delete';
+	save_screenshot;
         assert_screen "hexchat-nick-empty";
         type_string "openqa" . random_string(5);
+	save_screenshot;
         assert_and_click "$name-connect-button";
         assert_screen "$name-connection-complete-dialog";
         assert_and_click "$name-join-channel";
