@@ -842,6 +842,8 @@ sub post_fail_hook {
         record_info('System I/O status:', ($io_status =~ /^0$/) ? 'idle' : 'busy');
     }
 
+    $self->problem_detection;
+    $self->export_logs_basic;
     # In case the system is stuck in shutting down or during boot up, press
     # 'esc' just in case the plymouth splash screen is shown and we can not
     # see any interesting console logs.
