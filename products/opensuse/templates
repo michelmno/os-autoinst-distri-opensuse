@@ -5099,6 +5099,7 @@
                       settings => [
                         { key => "DESKTOP", value => "textmode" },
                         { key => "VIDEOMODE", value => "text" },
+                        { key => "MAX_JOB_TIME", value => 14400 },
                       ],
                     },
                     {
