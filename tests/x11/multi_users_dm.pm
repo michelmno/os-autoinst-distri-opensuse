@@ -44,7 +44,7 @@ sub restart_x11 {
     $args{setnologin} //= 0;
     record_soft_failure('bsc#1063060 workaround for graphical errors on cirrus when restarting X11 -> performing reboot');
     type_string "reboot\n";
-    $self->wait_boot(nologin => $args{setnologin}, forcenologin => $args{setnologin});
+    $self->wait_boot(ready_time => 300, bootloader_time => 300, nologin => $args{setnologin}, forcenologin => $args{setnologin});
 }
 
 sub run {
