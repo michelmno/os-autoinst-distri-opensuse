@@ -429,7 +429,7 @@ sub bootmenu_network_source {
                 push @params, 'install=http://' . get_var("SUSEMIRROR");
             }
             else {
-                push @params, ('kexec=3', 'insecure=1');
+                push @params, ('kexec=3', 'insecure=1', ' -d');
             }
         }
         else {
