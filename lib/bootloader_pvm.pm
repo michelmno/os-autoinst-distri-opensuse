@@ -97,7 +97,7 @@ sub prepare_pvm_installation {
 
     my $repo     = get_required_var('REPO_0');
     my $mirror   = get_netboot_mirror;
-    my $mntpoint = "mnt/openqa/repo/$repo/boot/ppc64le";
+    my $mntpoint = get_var('BOOTP_REPO', "mnt/openqa/repo/$repo/boot/ppc64le");
     assert_screen "pvm-grub-command-line-fresh-prompt", no_wait => 1;
     type_string_slow "linux $mntpoint/linux vga=normal install=$mirror ";
     bootmenu_default_params;
@@ -112,6 +112,8 @@ sub prepare_pvm_installation {
     type_string_slow "initrd $mntpoint/initrd\n";
 
     assert_screen "pvm-grub-command-line-fresh-prompt", 180, no_wait => 1;    # initrd is downloaded while waiting
+    save_screenshot;
+    record_info("boot", "just before boot");
     type_string "boot\n";
     save_screenshot;
 
@@ -173,6 +175,15 @@ sub boot_hmc_pvm {
     type_string("chsysstate -r lpar -m $hmc_machine_name -o shutdown --immed --id $lpar_id \n");
     type_string("for ((i=0\; i<24\; i++)); do lssyscfg -m $hmc_machine_name -r lpar --filter \"\"lpar_ids=$lpar_id\"\" -F state | grep -q 'Not Activated' && echo 'LPAR IS DOWN' && break || echo 'Waiting for lpar $lpar_id to shutdown' && sleep 5 ; done \n");
     assert_screen 'lpar-is-down', 120;
+
+    # verify current lpar state, expecting not activated, may take some time
+    my $counter = 3;
+    while ($counter--) {
+        type_string "lssyscfg   -r lpar -m $hmc_machine_name -F lpar_id:name:state |grep ^$lpar_id: && echo 'LPAR SUCCESSFULLY STATE DISPLAY'\n";
+        last if (check_screen('pvm-poweroff-lpar_not_activated', 1));
+	# wait for lpar to complete shutdown
+	sleep 5;
+    }
 
     # proceed with normal boot if is system already installed, use sms boot for installation
     my $bootmode = get_var('BOOT_HDD_IMAGE') ? "norm" : "sms";
