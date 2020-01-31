@@ -509,8 +509,13 @@ sub save_upload_y2logs {
         upload_logs $filename;
     } else {    # Redirect logs content to serial
         script_run("journalctl -b --no-pager -o short-precise > /dev/$serialdev");
+        script_run("ls -ltr /tmp > /dev/$serialdev");
+        script_run("ls -ltr /var/log > /dev/$serialdev");
+        script_run("ls -ltr /var/log/YaST2 > /dev/$serialdev");
         script_run("dmesg > /dev/$serialdev");
-        script_run("cat /var/log/YaST/y2log > /dev/$serialdev");
+        script_run("ffile='/var/log/messages';    [[ -f \$ffile ]] && cat \$ffile > /dev/$serialdev");
+        script_run("ffile='/var/log/linuxrc.log'; [[ -f \$ffile ]] && cat \$ffile > /dev/$serialdev");
+        script_run("ffile='/var/log/YaST2/y2log'; [[ -f \$ffile ]] && cat \$ffile > /dev/$serialdev");
     }
     save_screenshot();
     # We skip parsing yast2 logs in each installation scenario, but only if
