@@ -33,6 +33,10 @@ use ipmi_backend_utils;
 sub run {
     my ($self) = @_;
     my $dasd_path = get_var('DASD_PATH', '0.0.0150');
+    if (get_var('BACKEND', '') =~ /pvm_hmc/) {
+        record_soft_failure "bypass poo#62819, reset_consoles before select_console";
+        reset_consoles;
+    }
     select_console 'install-shell';
 
     # check for right boot-device on s390x (zVM, DASD ONLY)
