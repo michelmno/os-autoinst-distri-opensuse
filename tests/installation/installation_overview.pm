@@ -27,6 +27,17 @@ use Test::Assert ':all';
 sub ensure_ssh_unblocked {
     if (!get_var('UPGRADE') && is_remote_backend) {
 
+        send_key_until_needlematch [qw(ssh-service-disabled ssh-service-enabled)], 'tab';
+        if (match_has_tag 'ssh-service-disabled') {
+            if (check_var('VIDEOMODE', 'text')) {
+                die "force error as long as VIDEOMODE=text not tested, need to determine flow";
+            }
+            else {
+                send_key_until_needlematch 'ssh-service-disabled-selected', 'tab', 25;
+                send_key 'ret';
+                send_key_until_needlematch 'ssh-service-enabled', 'tab';
+            }
+        }
         send_key_until_needlematch [qw(ssh-blocked ssh-open)], 'tab';
         if (match_has_tag 'ssh-blocked') {
             if (check_var('VIDEOMODE', 'text')) {
