@@ -67,12 +67,22 @@ sub bug_workaround_bsc1005313 {
     send_key 'ctrl-x';
 }
 
+sub exit_sms_for_pvm_hmc {
+    return unless (get_var('BACKEND', '') =~ /pvm_hmc/);
+
+    assert_screen 'pvm-bootmenu', 90;
+    type_string_slow "X";
+    assert_screen 'pvm-bootmenu-boot-exit';
+    type_string_slow "1\n";
+}
+
 sub run {
     my ($self) = @_;
     my $timeout = get_var('GRUB_TIMEOUT', 90);
 
     $self->handle_installer_medium_bootup;
     workaround_type_encrypted_passphrase;
+    exit_sms_for_pvm_hmc;
     # 60 due to rare slowness e.g. multipath poo#11908
     # 90 as a workaround due to the qemu backend fallout
     assert_screen_with_soft_timeout('grub2', timeout => 2 * $timeout, soft_timeout => $timeout, bugref => 'boo#1120256');
