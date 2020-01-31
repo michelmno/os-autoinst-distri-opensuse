@@ -501,7 +501,8 @@ sub save_upload_y2logs {
     $args{no_ntwrk_recovery} //= (get_var('BACKEND') !~ /qemu/);
 
     # Try to recover network if cannot reach gw and upload logs if everything works
-    if (can_upload_logs() || (!$args{no_ntwrk_recovery} && recover_network())) {
+    if ((get_var('BACKEND') !~ /pvm_hmc/) && \
+        (can_upload_logs() || (!$args{no_ntwrk_recovery} && recover_network()))) {
         assert_script_run 'sed -i \'s/^tar \(.*$\)/tar --warning=no-file-changed -\1 || true/\' /usr/sbin/save_y2logs';
         my $filename = "/tmp/y2logs$args{suffix}.tar" . get_available_compression();
         assert_script_run "save_y2logs $filename", 180;
