@@ -515,7 +515,9 @@ sub save_upload_y2logs {
         script_run("dmesg > /dev/$serialdev");
         script_run("ffile='/var/log/messages';    [[ -f \$ffile ]] && cat \$ffile > /dev/$serialdev");
         script_run("ffile='/var/log/linuxrc.log'; [[ -f \$ffile ]] && cat \$ffile > /dev/$serialdev");
+	script_run("for xx in 5 4 3 2 1; do yy=/var/log/YaST2/y2log-\${xx}.gz; [[ -f \$yy ]] && gunzip -c \$yy >/dev/$serialdev; done");
         script_run("ffile='/var/log/YaST2/y2log'; [[ -f \$ffile ]] && cat \$ffile > /dev/$serialdev");
+
     }
     save_screenshot();
     # We skip parsing yast2 logs in each installation scenario, but only if
