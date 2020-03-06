@@ -440,6 +440,11 @@ sub bootmenu_default_params {
         # On JeOS and CaaSP we don't have YaST installer.
         push @params, "Y2DEBUG=1" unless is_jeos || is_caasp;
 
+        if ((get_var('BACKEND', '') =~ /pvm_hmc/) && \
+            check_var('VIDEOMODE', "text")) {
+            push @params, "texmode=1";
+        }
+
         # gfxpayload variable replaced vga option in grub2
         if (!is_jeos && !is_caasp && (check_var('ARCH', 'i586') || check_var('ARCH', 'x86_64'))) {
             push @params, "vga=791";
