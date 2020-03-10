@@ -146,10 +146,15 @@ sub prepare_pvm_installation {
         }
     }
     # Switch to installation console (ssh or vnc)
-    # and wait for installation of betawarning needle.
-    select_console 'installation', tags => get_var('BETA') ?  'inst-betawarning' : 'installation';
-    # We need to start installer only if it's pure ssh installation
-    type_string("yast.ssh\n") if get_var('VIDEOMODE', '') =~ /ssh-x|text/;
+    if (get_var('VIDEOMODE', '') =~ /ssh-x|text/) {
+        select_console('installation');
+        # We need to start installer only if it's pure ssh installation
+        type_string("yast.ssh\n");
+    }
+    else {
+        # wait for installation or betawarning needle.
+        select_console 'installation', tags => get_var('BETA') ?  'inst-betawarning' : 'installation';
+    }
     wait_still_screen;
 }
 
