@@ -145,8 +145,6 @@ sub prepare_pvm_installation {
             }
         }
     }
-    record_soft_failure "bypass poo#62819, reset_consoles to avoid error on next install-shell usage (in installation_overview)";
-    reset_consoles;
     # Switch to installation console (ssh or vnc)
     select_console('installation');
     # We need to start installer only if it's pure ssh installation
