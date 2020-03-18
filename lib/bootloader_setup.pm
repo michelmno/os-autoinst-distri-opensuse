@@ -421,7 +421,7 @@ sub get_linuxrc_boot_params {
 sub bootmenu_default_params {
     my (%args) = @_;
     my @params;
-    if (get_var('OFW')) {
+    if (get_var('OFW') && (!get_var('BACKEND', '') =~ /pvm_hmc/)) {
         # edit menu, wait until we get to grub edit
         wait_screen_change { send_key "e" };
         # go down to kernel entry
