@@ -242,6 +242,8 @@ sub test_pgsql {
     # add sudo rights to switch postgresql version and run script to determine oldest and latest version
     assert_script_run 'echo "postgres ALL=(root) NOPASSWD: ALL" >>/etc/sudoers';
     assert_script_run "gpasswd -a postgres \$(stat -c %G /dev/$serialdev)";
+    script_run "ls -l /dev/$serialdev";
+    script_run "id postgres";
     if (get_var('BACKEND', '') =~ /pvm_hmc/) {
         record_soft_failure("poo#32960 - pvm-hmc bypass failure access /dev/sshserial by postgres (not valid issue number)");
 	script_run "sudo chmod g+w /dev/sshserial";
