@@ -79,12 +79,20 @@ sub get_suse_container_urls {
         push @stable_names, "docker.io/opensuse/tumbleweed";
     }
     elsif (is_leap(">15.0") && check_var('ARCH', 'x86_64')) {
-        push @image_names,  "registry.opensuse.org/opensuse/leap/${version}/images/totest/containers/opensuse/leap:${version}";
-        push @stable_names, "docker.io/opensuse/leap:${version}";
+	my $leapvers = $version;
+        if ($version =~ /^Jump/) {
+            $leapvers =~ s/Jump/Leap/;
+	}
+        push @image_names,  "registry.opensuse.org/opensuse/leap/${leapvers}/images/totest/containers/opensuse/leap:${leapvers}";
+        push @stable_names, "docker.io/opensuse/leap:${leapvers}";
     }
     elsif (is_leap(">15.0") && (check_var('ARCH', 'aarch64') || check_var('ARCH', 'arm'))) {
-        push @image_names,  "registry.opensuse.org/opensuse/leap/${version}/arm/images/totest/containers/opensuse/leap:${version}";
-        push @stable_names, "docker.io/opensuse/leap:${version}";
+	my $leapvers = $version;
+        if ($version =~ /^Jump/) {
+            $leapvers =~ s/Jump/Leap/;
+	}
+        push @image_names,  "registry.opensuse.org/opensuse/leap/${leapvers}/arm/images/totest/containers/opensuse/leap:${leapvers}";
+        push @stable_names, "docker.io/opensuse/leap:${leapvers}";
     }
     elsif (is_leap(">15.0") && check_var('ARCH', 'ppc64le')) {
         # No image set up yet :-(
