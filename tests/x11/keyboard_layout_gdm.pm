@@ -44,7 +44,7 @@ sub run {
     $self->reboot(setnologin => 1);
 
     # check gdm keyboard layout
-    assert_and_click('user_not_listed');
+    wait_screen_change { assert_and_click('user_not_listed') };
     type_string "qwertz";
     assert_screen 'gdm-user-querty', 60;
 
